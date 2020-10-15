@@ -1,5 +1,5 @@
 {
-    "name": "ImpreseeGuzzleHttp/guzzle",
+    "name": "impresee/guzzle",
     "type": "library",
     "description": "Guzzle is a PHP HTTP client library",
     "keywords": [
