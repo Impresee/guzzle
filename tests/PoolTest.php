@@ -1,14 +1,14 @@
 <?php
-namespace GuzzleHttp\Tests;
+namespace ImpreseeGuzzleHttp\Tests;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Pool;
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\Client;
+use ImpreseeGuzzleHttp\Exception\ClientException;
+use ImpreseeGuzzleHttp\Handler\MockHandler;
+use ImpreseeGuzzleHttp\HandlerStack;
+use ImpreseeGuzzleHttp\Pool;
+use ImpreseeGuzzleHttp\Promise\Promise;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 

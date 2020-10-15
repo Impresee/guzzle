@@ -12,15 +12,15 @@ foreach (['README.md', 'LICENSE'] as $file) {
 }
 
 // Copy each dependency to the staging directory. Copy *.php and *.pem files.
-$packager->recursiveCopy('src', 'GuzzleHttp', ['php']);
-$packager->recursiveCopy('vendor/guzzlehttp/promises/src', 'GuzzleHttp/Promise');
-$packager->recursiveCopy('vendor/guzzlehttp/psr7/src', 'GuzzleHttp/Psr7');
+$packager->recursiveCopy('src', 'ImpreseeGuzzleHttp', ['php']);
+$packager->recursiveCopy('vendor/ImpreseeGuzzleHttp/promises/src', 'ImpreseeGuzzleHttp/Promise');
+$packager->recursiveCopy('vendor/ImpreseeGuzzleHttp/psr7/src', 'ImpreseeGuzzleHttp/Psr7');
 $packager->recursiveCopy('vendor/psr/http-message/src', 'Psr/Http/Message');
 
 $packager->createAutoloader([
-    'GuzzleHttp/functions_include.php',
-    'GuzzleHttp/Psr7/functions_include.php',
-    'GuzzleHttp/Promise/functions_include.php',
+    'ImpreseeGuzzleHttp/functions_include.php',
+    'ImpreseeGuzzleHttp/Psr7/functions_include.php',
+    'ImpreseeGuzzleHttp/Promise/functions_include.php',
 ]);
 
 $packager->createPhar(__DIR__ . '/artifacts/guzzle.phar');

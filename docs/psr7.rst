@@ -8,14 +8,14 @@ with any other library that utilizes PSR-7 message interfaces.
 Guzzle is an HTTP client that sends HTTP requests to a server and receives HTTP
 responses. Both requests and responses are referred to as messages.
 
-Guzzle relies on the ``guzzlehttp/psr7`` Composer package for its message
+Guzzle relies on the ``ImpreseeGuzzleHttp/psr7`` Composer package for its message
 implementation of PSR-7.
 
-You can create a request using the ``GuzzleHttp\Psr7\Request`` class:
+You can create a request using the ``ImpreseeGuzzleHttp\Psr7\Request`` class:
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7\Request;
+    use ImpreseeGuzzleHttp\Psr7\Request;
 
     $request = new Request('GET', 'http://httpbin.org/get');
 
@@ -24,11 +24,11 @@ You can create a request using the ``GuzzleHttp\Psr7\Request`` class:
     $body = 'hello!';
     $request = new Request('PUT', 'http://httpbin.org/put', $headers, $body);
 
-You can create a response using the ``GuzzleHttp\Psr7\Response`` class:
+You can create a response using the ``ImpreseeGuzzleHttp\Psr7\Response`` class:
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7\Response;
+    use ImpreseeGuzzleHttp\Psr7\Response;
 
     // The constructor requires no arguments.
     $response = new Response();
@@ -57,7 +57,7 @@ You can check if a request or response has a specific header using the
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7;
+    use ImpreseeGuzzleHttp\Psr7;
 
     $request = new Psr7\Request('GET', '/', ['X-Foo' => 'bar']);
 
@@ -100,7 +100,7 @@ headers:
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7;
+    use ImpreseeGuzzleHttp\Psr7;
 
     $request = new Psr7\Request('GET', '/', [
         'Link' => '<http:/.../front.jpeg>; rel="front"; type="image/jpeg"'
@@ -136,7 +136,7 @@ You can retrieve the body of a message using the ``getBody()`` method:
 
 .. code-block:: php
 
-    $response = GuzzleHttp\get('http://httpbin.org/get');
+    $response = ImpreseeGuzzleHttp\get('http://httpbin.org/get');
     echo $response->getBody();
     // JSON string: { ... }
 
@@ -148,8 +148,8 @@ exceeds 2 MB, the stream will automatically switch to storing data on disk
 rather than in memory (protecting your application from memory exhaustion).
 
 The easiest way to create a body for a message is using the ``stream_for``
-function from the ``GuzzleHttp\Psr7`` namespace --
-``GuzzleHttp\Psr7\stream_for``. This function accepts strings, resources,
+function from the ``ImpreseeGuzzleHttp\Psr7`` namespace --
+``ImpreseeGuzzleHttp\Psr7\stream_for``. This function accepts strings, resources,
 callables, iterators, other streamables, and returns an instance of
 ``Psr\Http\Message\StreamInterface``.
 
@@ -158,7 +158,7 @@ write bytes off of the stream as needed.
 
 .. code-block:: php
 
-    use GuzzleHttp\Stream\Stream;
+    use ImpreseeGuzzleHttp\Stream\Stream;
     $response = $client->request('GET', 'http://httpbin.org/get');
 
     echo $response->getBody()->read(4);
@@ -185,7 +185,7 @@ that might not be part of RFC 7231 (like "MOVE").
 .. code-block:: php
 
     // Create a request using a completely custom HTTP method
-    $request = new \GuzzleHttp\Psr7\Request('MOVE', 'http://httpbin.org/move');
+    $request = new \ImpreseeGuzzleHttp\Psr7\Request('MOVE', 'http://httpbin.org/move');
 
     echo $request->getMethod();
     // MOVE
@@ -213,7 +213,7 @@ Request URI
 
 The request URI is represented by a ``Psr\Http\Message\UriInterface`` object.
 Guzzle provides an implementation of this interface using the
-``GuzzleHttp\Psr7\Uri`` class.
+``ImpreseeGuzzleHttp\Psr7\Uri`` class.
 
 When creating a request, you can provide the URI as a string or an instance of
 ``Psr\Http\Message\UriInterface``.
@@ -310,7 +310,7 @@ status code, and reason phrase.
 
 .. code-block:: php
 
-    $client = new \GuzzleHttp\Client();
+    $client = new \ImpreseeGuzzleHttp\Client();
     $response = $client->request('GET', 'http://httpbin.org/get');
 
     echo $response->getStatusCode(); // 200
@@ -363,7 +363,7 @@ write-only, read-write, allow arbitrary random access (seeking forwards or
 backwards to any location), or only allow sequential access (for example in the
 case of a socket or pipe).
 
-Guzzle uses the ``guzzlehttp/psr7`` package to provide stream support. More
+Guzzle uses the ``ImpreseeGuzzleHttp/psr7`` package to provide stream support. More
 information on using streams, creating streams, converting streams to PHP
 stream resource, and stream decorators can be found in the
 `Guzzle PSR-7 documentation <https://github.com/guzzle/psr7/blob/master/README.md>`_.
@@ -372,14 +372,14 @@ stream resource, and stream decorators can be found in the
 Creating Streams
 ----------------
 
-The best way to create a stream is using the ``GuzzleHttp\Psr7\stream_for``
+The best way to create a stream is using the ``ImpreseeGuzzleHttp\Psr7\stream_for``
 function. This function accepts strings, resources returned from ``fopen()``,
 an object that implements ``__toString()``, iterators, callables, and instances
 of ``Psr\Http\Message\StreamInterface``.
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7;
+    use ImpreseeGuzzleHttp\Psr7;
 
     $stream = Psr7\stream_for('string data');
     echo $stream;
@@ -399,7 +399,7 @@ requested by a stream consumer will be buffered until a subsequent read.
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7;
+    use ImpreseeGuzzleHttp\Psr7;
 
     $generator = function ($bytes) {
         for ($i = 0; $i < $bytes; $i++) {
@@ -422,7 +422,7 @@ and can optionally expose other custom data.
 
 .. code-block:: php
 
-    use GuzzleHttp\Psr7;
+    use ImpreseeGuzzleHttp\Psr7;
 
     $resource = fopen('/path/to/file', 'r');
     $stream = Psr7\stream_for($resource);

@@ -1,17 +1,17 @@
 <?php
-namespace GuzzleHttp\Tests\CookieJar;
+namespace ImpreseeGuzzleHttp\Tests\CookieJar;
 
 use DateInterval;
 use DateTime;
 use DateTimeImmutable;
-use GuzzleHttp\Cookie\CookieJar;
-use GuzzleHttp\Cookie\SetCookie;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\Cookie\CookieJar;
+use ImpreseeGuzzleHttp\Cookie\SetCookie;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers GuzzleHttp\Cookie\CookieJar
+ * @covers ImpreseeGuzzleHttp\Cookie\CookieJar
  */
 class CookieJarTest extends TestCase
 {

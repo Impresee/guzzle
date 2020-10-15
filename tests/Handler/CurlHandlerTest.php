@@ -1,17 +1,17 @@
 <?php
-namespace GuzzleHttp\Test\Handler;
+namespace ImpreseeGuzzleHttp\Test\Handler;
 
-use GuzzleHttp\Exception\ConnectException;
-use GuzzleHttp\Handler\CurlHandler;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Tests\Server;
-use GuzzleHttp\Utils;
+use ImpreseeGuzzleHttp\Exception\ConnectException;
+use ImpreseeGuzzleHttp\Handler\CurlHandler;
+use ImpreseeGuzzleHttp\Psr7;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\Tests\Server;
+use ImpreseeGuzzleHttp\Utils;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \GuzzleHttp\Handler\CurlHandler
+ * @covers \ImpreseeGuzzleHttp\Handler\CurlHandler
  */
 class CurlHandlerTest extends TestCase
 {
@@ -21,7 +21,7 @@ class CurlHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\ConnectException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\ConnectException
      * @expectedExceptionMessage cURL
      */
     public function testCreatesCurlErrors()
@@ -38,8 +38,8 @@ class CurlHandlerTest extends TestCase
         Server::enqueue([$response, $response]);
         $a = new CurlHandler();
         $request = new Request('GET', Server::$url);
-        self::assertInstanceOf('GuzzleHttp\Promise\FulfilledPromise', $a($request, []));
-        self::assertInstanceOf('GuzzleHttp\Promise\FulfilledPromise', $a($request, []));
+        self::assertInstanceOf('ImpreseeGuzzleHttp\Promise\FulfilledPromise', $a($request, []));
+        self::assertInstanceOf('ImpreseeGuzzleHttp\Promise\FulfilledPromise', $a($request, []));
     }
 
     public function testDoesSleep()

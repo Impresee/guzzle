@@ -1,7 +1,7 @@
 <?php
-namespace GuzzleHttp\Test;
+namespace ImpreseeGuzzleHttp\Test;
 
-use GuzzleHttp;
+use ImpreseeGuzzleHttp;
 use PHPUnit\Framework\TestCase;
 
 class FunctionsTest extends TestCase
@@ -10,7 +10,7 @@ class FunctionsTest extends TestCase
     {
         self::assertSame(
             'foo/123',
-            GuzzleHttp\uri_template('foo/{bar}', ['bar' => '123'])
+            ImpreseeGuzzleHttp\uri_template('foo/{bar}', ['bar' => '123'])
         );
     }
     public function noBodyProvider()
@@ -20,8 +20,8 @@ class FunctionsTest extends TestCase
 
     public function testProvidesDefaultUserAgent()
     {
-        $ua = GuzzleHttp\default_user_agent();
-        self::assertRegExp('#^GuzzleHttp/.+ curl/.+ PHP/.+$#', $ua);
+        $ua = ImpreseeGuzzleHttp\default_user_agent();
+        self::assertRegExp('#^ImpreseeGuzzleHttp/.+ curl/.+ PHP/.+$#', $ua);
     }
 
     public function typeProvider()
@@ -32,7 +32,7 @@ class FunctionsTest extends TestCase
             [false, 'bool(false)'],
             [10, 'int(10)'],
             [1.0, 'float(1)'],
-            [new StrClass(), 'object(GuzzleHttp\Test\StrClass)'],
+            [new StrClass(), 'object(ImpreseeGuzzleHttp\Test\StrClass)'],
             [['foo'], 'array(1)']
         ];
     }
@@ -41,7 +41,7 @@ class FunctionsTest extends TestCase
      */
     public function testDescribesType($input, $output)
     {
-        self::assertSame($output, GuzzleHttp\describe_type($input));
+        self::assertSame($output, ImpreseeGuzzleHttp\describe_type($input));
     }
 
     public function testParsesHeadersFromLines()
@@ -51,7 +51,7 @@ class FunctionsTest extends TestCase
             'Foo' => ['bar', 'baz'],
             'Abc' => ['123'],
             'Def' => ['a, b'],
-        ], GuzzleHttp\headers_from_lines($lines));
+        ], ImpreseeGuzzleHttp\headers_from_lines($lines));
     }
 
     public function testParsesHeadersFromLinesWithMultipleLines()
@@ -59,17 +59,17 @@ class FunctionsTest extends TestCase
         $lines = ['Foo: bar', 'Foo: baz', 'Foo: 123'];
         self::assertSame([
             'Foo' => ['bar', 'baz', '123'],
-        ], GuzzleHttp\headers_from_lines($lines));
+        ], ImpreseeGuzzleHttp\headers_from_lines($lines));
     }
 
     public function testReturnsDebugResource()
     {
-        self::assertInternalType('resource', GuzzleHttp\debug_resource());
+        self::assertInternalType('resource', ImpreseeGuzzleHttp\debug_resource());
     }
 
     public function testProvidesDefaultCaBundler()
     {
-        self::assertFileExists(GuzzleHttp\default_ca_bundle());
+        self::assertFileExists(ImpreseeGuzzleHttp\default_ca_bundle());
     }
 
     public function noProxyProvider()
@@ -91,7 +91,7 @@ class FunctionsTest extends TestCase
     {
         self::assertSame(
             $result,
-            \GuzzleHttp\is_host_in_noproxy($host, $list)
+            \ImpreseeGuzzleHttp\is_host_in_noproxy($host, $list)
         );
     }
 
@@ -100,12 +100,12 @@ class FunctionsTest extends TestCase
      */
     public function testEnsuresNoProxyCheckHostIsSet()
     {
-        \GuzzleHttp\is_host_in_noproxy('', []);
+        \ImpreseeGuzzleHttp\is_host_in_noproxy('', []);
     }
 
     public function testEncodesJson()
     {
-        self::assertSame('true', \GuzzleHttp\json_encode(true));
+        self::assertSame('true', \ImpreseeGuzzleHttp\json_encode(true));
     }
 
     /**
@@ -113,12 +113,12 @@ class FunctionsTest extends TestCase
      */
     public function testEncodesJsonAndThrowsOnError()
     {
-        \GuzzleHttp\json_encode("\x99");
+        \ImpreseeGuzzleHttp\json_encode("\x99");
     }
 
     public function testDecodesJson()
     {
-        self::assertTrue(\GuzzleHttp\json_decode('true'));
+        self::assertTrue(\ImpreseeGuzzleHttp\json_decode('true'));
     }
 
     /**
@@ -126,7 +126,7 @@ class FunctionsTest extends TestCase
      */
     public function testDecodesJsonAndThrowsOnError()
     {
-        \GuzzleHttp\json_decode('{{]]');
+        \ImpreseeGuzzleHttp\json_decode('{{]]');
     }
 }
 

@@ -1,10 +1,10 @@
 <?php
-namespace GuzzleHttp;
+namespace ImpreseeGuzzleHttp;
 
-use GuzzleHttp\Exception\BadResponseException;
-use GuzzleHttp\Exception\TooManyRedirectsException;
-use GuzzleHttp\Promise\PromiseInterface;
-use GuzzleHttp\Psr7;
+use ImpreseeGuzzleHttp\Exception\BadResponseException;
+use ImpreseeGuzzleHttp\Exception\TooManyRedirectsException;
+use ImpreseeGuzzleHttp\Promise\PromiseInterface;
+use ImpreseeGuzzleHttp\Psr7;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
@@ -13,7 +13,7 @@ use Psr\Http\Message\UriInterface;
  * Request redirect middleware.
  *
  * Apply this middleware like other middleware using
- * {@see \GuzzleHttp\Middleware::redirect()}.
+ * {@see \ImpreseeGuzzleHttp\Middleware::redirect()}.
  */
 class RedirectMiddleware
 {

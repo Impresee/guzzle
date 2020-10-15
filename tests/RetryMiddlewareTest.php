@@ -1,13 +1,13 @@
 <?php
-namespace GuzzleHttp\Tests;
+namespace ImpreseeGuzzleHttp\Tests;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\Middleware;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\RetryMiddleware;
+use ImpreseeGuzzleHttp\Client;
+use ImpreseeGuzzleHttp\Handler\MockHandler;
+use ImpreseeGuzzleHttp\Middleware;
+use ImpreseeGuzzleHttp\Psr7;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\RetryMiddleware;
 use PHPUnit\Framework\TestCase;
 
 class RetryMiddlewareTest extends TestCase

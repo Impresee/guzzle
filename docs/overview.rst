@@ -39,7 +39,7 @@ You can add Guzzle as a dependency using the composer.phar CLI:
 
 .. code-block:: bash
 
-    php composer.phar require guzzlehttp/guzzle:~6.0
+    php composer.phar require ImpreseeGuzzleHttp/guzzle:~6.0
 
 Alternatively, you can specify Guzzle as a dependency in your project's
 existing composer.json file:
@@ -48,7 +48,7 @@ existing composer.json file:
 
     {
       "require": {
-         "guzzlehttp/guzzle": "~6.0"
+         "ImpreseeGuzzleHttp/guzzle": "~6.0"
       }
    }
 
@@ -72,7 +72,7 @@ branch by setting the version requirement for Guzzle to ``~6.0@dev``.
 
    {
       "require": {
-         "guzzlehttp/guzzle": "~6.0@dev"
+         "ImpreseeGuzzleHttp/guzzle": "~6.0@dev"
       }
    }
 

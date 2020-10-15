@@ -1,15 +1,15 @@
 <?php
-namespace GuzzleHttp\Test\Handler;
+namespace ImpreseeGuzzleHttp\Test\Handler;
 
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\Promise\PromiseInterface;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\TransferStats;
+use ImpreseeGuzzleHttp\Handler\MockHandler;
+use ImpreseeGuzzleHttp\Promise\PromiseInterface;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\TransferStats;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \GuzzleHttp\Handler\MockHandler
+ * @covers \ImpreseeGuzzleHttp\Handler\MockHandler
  */
 class MockHandlerTest extends TestCase
 {
@@ -99,7 +99,7 @@ class MockHandlerTest extends TestCase
 
     public function testSinkStream()
     {
-        $stream = new \GuzzleHttp\Psr7\Stream(tmpfile());
+        $stream = new \ImpreseeGuzzleHttp\Psr7\Stream(tmpfile());
         $res = new Response(200, [], 'TEST CONTENT');
         $mock = new MockHandler([$res]);
         $request = new Request('GET', '/');
@@ -134,7 +134,7 @@ class MockHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage An error was encountered during the on_headers event
      * @expectedExceptionMessage test
      */
@@ -185,7 +185,7 @@ class MockHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\BadResponseException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\BadResponseException
      */
     public function testCanCreateWithDefaultMiddleware()
     {

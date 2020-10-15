@@ -1,5 +1,5 @@
 <?php
-namespace GuzzleHttp\Handler;
+namespace ImpreseeGuzzleHttp\Handler;
 
 use Psr\Http\Message\RequestInterface;
 

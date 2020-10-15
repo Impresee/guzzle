@@ -1,16 +1,16 @@
 <?php
-namespace GuzzleHttp\Tests;
+namespace ImpreseeGuzzleHttp\Tests;
 
-use GuzzleHttp\Cookie\CookieJar;
-use GuzzleHttp\Cookie\SetCookie;
-use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\MessageFormatter;
-use GuzzleHttp\Middleware;
-use GuzzleHttp\Promise\PromiseInterface;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\Cookie\CookieJar;
+use ImpreseeGuzzleHttp\Cookie\SetCookie;
+use ImpreseeGuzzleHttp\Exception\RequestException;
+use ImpreseeGuzzleHttp\Handler\MockHandler;
+use ImpreseeGuzzleHttp\HandlerStack;
+use ImpreseeGuzzleHttp\MessageFormatter;
+use ImpreseeGuzzleHttp\Middleware;
+use ImpreseeGuzzleHttp\Promise\PromiseInterface;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -41,7 +41,7 @@ class MiddlewareTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\ClientException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\ClientException
      */
     public function testThrowsExceptionOnHttpClientError()
     {
@@ -55,7 +55,7 @@ class MiddlewareTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\ServerException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\ServerException
      */
     public function testThrowsExceptionOnHttpServerError()
     {

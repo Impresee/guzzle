@@ -1,14 +1,14 @@
 <?php
-namespace GuzzleHttp\Test\Handler;
+namespace ImpreseeGuzzleHttp\Test\Handler;
 
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\Handler\Proxy;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\RequestOptions;
+use ImpreseeGuzzleHttp\Handler\MockHandler;
+use ImpreseeGuzzleHttp\Handler\Proxy;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\RequestOptions;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \GuzzleHttp\Handler\Proxy
+ * @covers \ImpreseeGuzzleHttp\Handler\Proxy
  */
 class ProxyTest extends TestCase
 {

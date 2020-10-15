@@ -1,21 +1,21 @@
 <?php
-namespace GuzzleHttp\Test\Handler;
+namespace ImpreseeGuzzleHttp\Test\Handler;
 
-use GuzzleHttp\Exception\ConnectException;
-use GuzzleHttp\Handler\StreamHandler;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Psr7\FnStream;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\RequestOptions;
-use GuzzleHttp\Tests\Server;
-use GuzzleHttp\TransferStats;
-use GuzzleHttp\Utils;
+use ImpreseeGuzzleHttp\Exception\ConnectException;
+use ImpreseeGuzzleHttp\Handler\StreamHandler;
+use ImpreseeGuzzleHttp\Psr7;
+use ImpreseeGuzzleHttp\Psr7\FnStream;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\RequestOptions;
+use ImpreseeGuzzleHttp\Tests\Server;
+use ImpreseeGuzzleHttp\TransferStats;
+use ImpreseeGuzzleHttp\Utils;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * @covers \GuzzleHttp\Handler\StreamHandler
+ * @covers \ImpreseeGuzzleHttp\Handler\StreamHandler
  */
 class StreamHandlerTest extends TestCase
 {
@@ -51,7 +51,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      */
     public function testAddsErrorToResponse()
     {
@@ -261,7 +261,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\ConnectException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\ConnectException
      * @expectedExceptionMessage Connection refused
      */
     public function testAddsProxy()
@@ -298,7 +298,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage SSL CA bundle not found: /does/not/exist
      */
     public function testVerifiesVerifyIsValidIfPath()
@@ -309,11 +309,11 @@ class StreamHandlerTest extends TestCase
     public function testVerifyCanBeDisabled()
     {
         $handler = $this->getSendResult(['verify' => false]);
-        self::assertInstanceOf('GuzzleHttp\Psr7\Response', $handler);
+        self::assertInstanceOf('ImpreseeGuzzleHttp\Psr7\Response', $handler);
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage SSL certificate not found: /does/not/exist
      */
     public function testVerifiesCertIfValidPath()
@@ -323,7 +323,7 @@ class StreamHandlerTest extends TestCase
 
     public function testVerifyCanBeSetToPath()
     {
-        $path = $path = \GuzzleHttp\default_ca_bundle();
+        $path = $path = \ImpreseeGuzzleHttp\default_ca_bundle();
         $res = $this->getSendResult(['verify' => $path]);
         $opts = stream_context_get_options($res->getBody()->detach());
         self::assertTrue($opts['ssl']['verify_peer']);
@@ -334,7 +334,7 @@ class StreamHandlerTest extends TestCase
 
     public function testUsesSystemDefaultBundle()
     {
-        $path = $path = \GuzzleHttp\default_ca_bundle();
+        $path = $path = \ImpreseeGuzzleHttp\default_ca_bundle();
         $res = $this->getSendResult(['verify' => true]);
         $opts = stream_context_get_options($res->getBody()->detach());
         if (PHP_VERSION_ID < 50600) {
@@ -525,7 +525,7 @@ class StreamHandlerTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage An error was encountered during the on_headers event
      * @expectedExceptionMessage test
      */

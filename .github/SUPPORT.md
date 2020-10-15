@@ -10,7 +10,7 @@ Guzzle is a relatively old project, so chances are you will find
 much about them on Google or Stack Overflow:
 
 - [guzzle](https://stackoverflow.com/questions/tagged/guzzle) tag on Stack Overflow (recommended)
-- [guzzlehttp](https://stackoverflow.com/questions/tagged/guzzlehttp) tag on Stack Overflow
+- [ImpreseeGuzzleHttp](https://stackoverflow.com/questions/tagged/ImpreseeGuzzleHttp) tag on Stack Overflow
 - [guzzle6](https://stackoverflow.com/questions/tagged/guzzle6) tag on Stack Overflow
 
 

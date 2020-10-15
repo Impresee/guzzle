@@ -1,17 +1,17 @@
 <?php
-namespace GuzzleHttp\Test\Handler;
+namespace ImpreseeGuzzleHttp\Test\Handler;
 
-use GuzzleHttp\Handler;
-use GuzzleHttp\Handler\CurlFactory;
-use GuzzleHttp\Handler\EasyHandle;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Tests\Server;
-use GuzzleHttp\TransferStats;
+use ImpreseeGuzzleHttp\Handler;
+use ImpreseeGuzzleHttp\Handler\CurlFactory;
+use ImpreseeGuzzleHttp\Handler\EasyHandle;
+use ImpreseeGuzzleHttp\Psr7;
+use ImpreseeGuzzleHttp\Tests\Server;
+use ImpreseeGuzzleHttp\TransferStats;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * @covers \GuzzleHttp\Handler\CurlFactory
+ * @covers \ImpreseeGuzzleHttp\Handler\CurlFactory
  */
 class CurlFactoryTest extends TestCase
 {
@@ -448,7 +448,7 @@ class CurlFactoryTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage but attempting to rewind the request body failed
      */
     public function testFailsWhenCannotRewindRetryAfterNoResponse()
@@ -471,7 +471,7 @@ class CurlFactoryTest extends TestCase
 
         $fn = function ($r, $options) use (&$callHandler) {
             $callHandler = true;
-            return \GuzzleHttp\Promise\promise_for(new Psr7\Response());
+            return \ImpreseeGuzzleHttp\Promise\promise_for(new Psr7\Response());
         };
 
         $bd = Psr7\FnStream::decorate(Psr7\stream_for('test'), [
@@ -494,7 +494,7 @@ class CurlFactoryTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage The cURL request was retried 3 times
      */
     public function testFailsWhenRetryMoreThanThreeTimes()
@@ -532,7 +532,7 @@ class CurlFactoryTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\ConnectException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\ConnectException
      */
     public function testCreatesConnectException()
     {
@@ -622,7 +622,7 @@ class CurlFactoryTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\RequestException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\RequestException
      * @expectedExceptionMessage An error was encountered during the on_headers event
      * @expectedExceptionMessage test
      */

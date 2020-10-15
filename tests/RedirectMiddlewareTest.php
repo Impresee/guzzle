@@ -1,18 +1,18 @@
 <?php
-namespace GuzzleHttp\Tests;
+namespace ImpreseeGuzzleHttp\Tests;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Middleware;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\RedirectMiddleware;
+use ImpreseeGuzzleHttp\Client;
+use ImpreseeGuzzleHttp\Handler\MockHandler;
+use ImpreseeGuzzleHttp\HandlerStack;
+use ImpreseeGuzzleHttp\Middleware;
+use ImpreseeGuzzleHttp\Psr7\Request;
+use ImpreseeGuzzleHttp\Psr7\Response;
+use ImpreseeGuzzleHttp\RedirectMiddleware;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 
 /**
- * @covers GuzzleHttp\RedirectMiddleware
+ * @covers ImpreseeGuzzleHttp\RedirectMiddleware
  */
 class RedirectMiddlewareTest extends TestCase
 {
@@ -77,7 +77,7 @@ class RedirectMiddlewareTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\TooManyRedirectsException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\TooManyRedirectsException
      * @expectedExceptionMessage Will not follow more than 3 redirects
      */
     public function testLimitsToMaxRedirects()
@@ -97,7 +97,7 @@ class RedirectMiddlewareTest extends TestCase
     }
 
     /**
-     * @expectedException \GuzzleHttp\Exception\BadResponseException
+     * @expectedException \ImpreseeGuzzleHttp\Exception\BadResponseException
      * @expectedExceptionMessage Redirect URI,
      */
     public function testEnsuresProtocolIsValid()

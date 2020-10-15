@@ -1,9 +1,9 @@
 <?php
-namespace GuzzleHttp\Handler;
+namespace ImpreseeGuzzleHttp\Handler;
 
-use GuzzleHttp\Promise as P;
-use GuzzleHttp\Promise\Promise;
-use GuzzleHttp\Utils;
+use ImpreseeGuzzleHttp\Promise as P;
+use ImpreseeGuzzleHttp\Promise\Promise;
+use ImpreseeGuzzleHttp\Utils;
 use Psr\Http\Message\RequestInterface;
 
 /**
