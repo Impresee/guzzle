@@ -2,7 +2,7 @@
 namespace ImpreseeGuzzleHttp\Tests\Exception;
 
 use ImpreseeGuzzleHttp\Exception\ConnectException;
-use ImpreseeGuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Request;
 use PHPUnit\Framework\TestCase;
 
 /**

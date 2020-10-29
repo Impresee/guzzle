@@ -3,9 +3,9 @@ namespace ImpreseeGuzzleHttp\Handler;
 
 use ImpreseeGuzzleHttp\Exception\ConnectException;
 use ImpreseeGuzzleHttp\Exception\RequestException;
-use ImpreseeGuzzleHttp\Promise\FulfilledPromise;
-use ImpreseeGuzzleHttp\Promise\PromiseInterface;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Promise\FulfilledPromise;
+use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\Psr7;
 use ImpreseeGuzzleHttp\TransferStats;
 use ImpreseeGuzzleHttp\Utils;
 use Psr\Http\Message\RequestInterface;
@@ -68,7 +68,7 @@ class StreamHandler
             $e = RequestException::wrapException($request, $e);
             $this->invokeStats($options, $request, $startTime, null, $e);
 
-            return \ImpreseeGuzzleHttp\Promise\rejection_for($e);
+            return \GuzzleHttp\Promise\rejection_for($e);
         }
     }
 
@@ -120,7 +120,7 @@ class StreamHandler
             } catch (\Exception $e) {
                 $msg = 'An error was encountered during the on_headers event';
                 $ex = new RequestException($msg, $request, $response, $e);
-                return \ImpreseeGuzzleHttp\Promise\rejection_for($ex);
+                return \GuzzleHttp\Promise\rejection_for($ex);
             }
         }
 

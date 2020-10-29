@@ -1,9 +1,9 @@
 <?php
 namespace ImpreseeGuzzleHttp;
 
-use ImpreseeGuzzleHttp\Promise\PromiseInterface;
-use ImpreseeGuzzleHttp\Promise\RejectedPromise;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\Promise\RejectedPromise;
+use GuzzleHttp\Psr7;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -110,7 +110,7 @@ class RetryMiddleware
                 null,
                 $reason
             )) {
-                return \ImpreseeGuzzleHttp\Promise\rejection_for($reason);
+                return \GuzzleHttp\Promise\rejection_for($reason);
             }
             return $this->doRetry($req, $options);
         };

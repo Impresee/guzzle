@@ -3,8 +3,8 @@ namespace ImpreseeGuzzleHttp;
 
 use ImpreseeGuzzleHttp\Exception\BadResponseException;
 use ImpreseeGuzzleHttp\Exception\TooManyRedirectsException;
-use ImpreseeGuzzleHttp\Promise\PromiseInterface;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\Psr7;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;

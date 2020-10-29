@@ -3,10 +3,10 @@ namespace ImpreseeGuzzleHttp\Test\Handler;
 
 use ImpreseeGuzzleHttp\Exception\ConnectException;
 use ImpreseeGuzzleHttp\Handler\StreamHandler;
-use ImpreseeGuzzleHttp\Psr7;
-use ImpreseeGuzzleHttp\Psr7\FnStream;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\FnStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use ImpreseeGuzzleHttp\RequestOptions;
 use ImpreseeGuzzleHttp\Tests\Server;
 use ImpreseeGuzzleHttp\TransferStats;
@@ -309,7 +309,7 @@ class StreamHandlerTest extends TestCase
     public function testVerifyCanBeDisabled()
     {
         $handler = $this->getSendResult(['verify' => false]);
-        self::assertInstanceOf('ImpreseeGuzzleHttp\Psr7\Response', $handler);
+        self::assertInstanceOf('GuzzleHttp\Psr7\Response', $handler);
     }
 
     /**

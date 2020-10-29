@@ -4,8 +4,8 @@ namespace ImpreseeGuzzleHttp\Tests;
 use ImpreseeGuzzleHttp\Cookie\CookieJar;
 use ImpreseeGuzzleHttp\Handler\MockHandler;
 use ImpreseeGuzzleHttp\HandlerStack;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
 class HandlerStackTest extends TestCase

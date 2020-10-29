@@ -18,7 +18,7 @@ functions that wrap handlers (or are injected into a
 - Removed `ImpreseeGuzzleHttp\HasDataTrait`
 - Removed `ImpreseeGuzzleHttp\ToArrayInterface`
 - The `ImpreseeGuzzleHttp/streams` dependency has been removed. Stream functionality
-  is now present in the `ImpreseeGuzzleHttp\Psr7` namespace provided by the
+  is now present in the `GuzzleHttp\Psr7` namespace provided by the
   `ImpreseeGuzzleHttp/psr7` package.
 - Guzzle no longer uses ReactPHP promises and now uses the
   `ImpreseeGuzzleHttp/promises` library. We use a custom promise library for three
@@ -36,16 +36,16 @@ functions that wrap handlers (or are injected into a
      overhead is no longer needed, reducing stack sizes, reducing complexity,
      and improving performance.
 - `ImpreseeGuzzleHttp\Mimetypes` has been moved to a function in
-  `ImpreseeGuzzleHttp\Psr7\mimetype_from_extension` and
-  `ImpreseeGuzzleHttp\Psr7\mimetype_from_filename`.
+  `GuzzleHttp\Psr7\mimetype_from_extension` and
+  `GuzzleHttp\Psr7\mimetype_from_filename`.
 - `ImpreseeGuzzleHttp\Query` and `ImpreseeGuzzleHttp\QueryParser` have been removed. Query
   strings must now be passed into request objects as strings, or provided to
   the `query` request option when creating requests with clients. The `query`
   option uses PHP's `http_build_query` to convert an array to a string. If you
   need a different serialization technique, you will need to pass the query
   string in as a string. There are a couple helper functions that will make
-  working with query strings easier: `ImpreseeGuzzleHttp\Psr7\parse_query` and
-  `ImpreseeGuzzleHttp\Psr7\build_query`.
+  working with query strings easier: `GuzzleHttp\Psr7\parse_query` and
+  `GuzzleHttp\Psr7\build_query`.
 - Guzzle no longer has a dependency on RingPHP. Due to the use of a middleware
   system based on PSR-7, using RingPHP and it's middleware system as well adds
   more complexity than the benefits it provides. All HTTP handlers that were
@@ -76,7 +76,7 @@ functions that wrap handlers (or are injected into a
   - `ImpreseeGuzzleHttp\Subscriber\Redirect` is now provided by
     `ImpreseeGuzzleHttp\RedirectMiddleware`
 - Guzzle now uses `Psr\Http\Message\UriInterface` (implements in
-  `ImpreseeGuzzleHttp\Psr7\Uri`) for URI support. `ImpreseeGuzzleHttp\Url` is now gone.
+  `GuzzleHttp\Psr7\Uri`) for URI support. `ImpreseeGuzzleHttp\Url` is now gone.
 - Static functions in `ImpreseeGuzzleHttp\Utils` have been moved to namespaced
   functions under the `ImpreseeGuzzleHttp` namespace. This requires either a Composer
   based autoloader or you to include functions.php.

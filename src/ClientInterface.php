@@ -2,7 +2,7 @@
 namespace ImpreseeGuzzleHttp;
 
 use ImpreseeGuzzleHttp\Exception\GuzzleException;
-use ImpreseeGuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\Promise\PromiseInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;

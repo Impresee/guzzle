@@ -2,9 +2,9 @@
 namespace ImpreseeGuzzleHttp\Tests\Exception;
 
 use ImpreseeGuzzleHttp\Exception\RequestException;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
-use ImpreseeGuzzleHttp\Psr7\Stream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Stream;
 use PHPUnit\Framework\TestCase;
 
 /**

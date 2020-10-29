@@ -4,11 +4,11 @@ namespace ImpreseeGuzzleHttp\Tests;
 use ImpreseeGuzzleHttp\Handler\MockHandler;
 use ImpreseeGuzzleHttp\HandlerStack;
 use ImpreseeGuzzleHttp\Middleware;
-use ImpreseeGuzzleHttp\Promise\PromiseInterface;
-use ImpreseeGuzzleHttp\Psr7;
-use ImpreseeGuzzleHttp\Psr7\FnStream;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Promise\PromiseInterface;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\FnStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\RequestInterface;
 

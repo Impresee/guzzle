@@ -2,8 +2,8 @@
 namespace ImpreseeGuzzleHttp\Tests\Handler;
 
 use ImpreseeGuzzleHttp\Handler\CurlMultiHandler;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use ImpreseeGuzzleHttp\Tests\Server;
 use ImpreseeGuzzleHttp\Utils;
 use PHPUnit\Framework\TestCase;

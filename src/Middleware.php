@@ -3,8 +3,8 @@ namespace ImpreseeGuzzleHttp;
 
 use ImpreseeGuzzleHttp\Cookie\CookieJarInterface;
 use ImpreseeGuzzleHttp\Exception\RequestException;
-use ImpreseeGuzzleHttp\Promise\RejectedPromise;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Promise\RejectedPromise;
+use GuzzleHttp\Psr7;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
@@ -102,7 +102,7 @@ final class Middleware
                             'error'    => $reason,
                             'options'  => $options
                         ];
-                        return \ImpreseeGuzzleHttp\Promise\rejection_for($reason);
+                        return \GuzzleHttp\Promise\rejection_for($reason);
                     }
                 );
             };
@@ -198,7 +198,7 @@ final class Middleware
                             : null;
                         $message = $formatter->format($request, $response, $reason);
                         $logger->notice($message);
-                        return \ImpreseeGuzzleHttp\Promise\rejection_for($reason);
+                        return \GuzzleHttp\Promise\rejection_for($reason);
                     }
                 );
             };

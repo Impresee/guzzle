@@ -1,7 +1,7 @@
 <?php
 namespace ImpreseeGuzzleHttp\Tests;
 
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Psr7;
 use ImpreseeGuzzleHttp\TransferStats;
 use PHPUnit\Framework\TestCase;
 
