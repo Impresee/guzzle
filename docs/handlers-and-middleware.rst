@@ -8,7 +8,7 @@ Handlers
 ========
 
 A handler function accepts a ``Psr\Http\Message\RequestInterface`` and array of
-request options and returns a ``ImpreseeGuzzleHttp\Promise\PromiseInterface`` that is
+request options and returns a ``GuzzleHttp\Promise\PromiseInterface`` that is
 fulfilled with a ``Psr\Http\Message\ResponseInterface`` or rejected with an
 exception.
 
@@ -282,7 +282,7 @@ Creating a Handler
 
 As stated earlier, a handler is a function accepts a
 ``Psr\Http\Message\RequestInterface`` and array of request options and returns
-a ``ImpreseeGuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a
+a ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a
 ``Psr\Http\Message\ResponseInterface`` or rejected with an exception.
 
 A handler is responsible for applying the following :doc:`request-options`.

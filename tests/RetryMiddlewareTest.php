@@ -4,9 +4,9 @@ namespace ImpreseeGuzzleHttp\Tests;
 use ImpreseeGuzzleHttp\Client;
 use ImpreseeGuzzleHttp\Handler\MockHandler;
 use ImpreseeGuzzleHttp\Middleware;
-use ImpreseeGuzzleHttp\Psr7;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use ImpreseeGuzzleHttp\RetryMiddleware;
 use PHPUnit\Framework\TestCase;
 

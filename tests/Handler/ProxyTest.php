@@ -3,7 +3,7 @@ namespace ImpreseeGuzzleHttp\Test\Handler;
 
 use ImpreseeGuzzleHttp\Handler\MockHandler;
 use ImpreseeGuzzleHttp\Handler\Proxy;
-use ImpreseeGuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Request;
 use ImpreseeGuzzleHttp\RequestOptions;
 use PHPUnit\Framework\TestCase;
 

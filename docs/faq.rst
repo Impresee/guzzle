@@ -26,7 +26,7 @@ Can Guzzle send asynchronous requests?
 Yes. You can use the ``requestAsync``, ``sendAsync``, ``getAsync``,
 ``headAsync``, ``putAsync``, ``postAsync``, ``deleteAsync``, and ``patchAsync``
 methods of a client to send an asynchronous request. The client will return a
-``ImpreseeGuzzleHttp\Promise\PromiseInterface`` object. You can chain ``then``
+``GuzzleHttp\Promise\PromiseInterface`` object. You can chain ``then``
 functions off of the promise.
 
 .. code-block:: php

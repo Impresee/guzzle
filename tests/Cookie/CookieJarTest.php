@@ -6,8 +6,8 @@ use DateTime;
 use DateTimeImmutable;
 use ImpreseeGuzzleHttp\Cookie\CookieJar;
 use ImpreseeGuzzleHttp\Cookie\SetCookie;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
 /**

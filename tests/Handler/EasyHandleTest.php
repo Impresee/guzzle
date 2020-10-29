@@ -2,7 +2,7 @@
 namespace ImpreseeGuzzleHttp\Test\Handler;
 
 use ImpreseeGuzzleHttp\Handler\EasyHandle;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Psr7;
 use PHPUnit\Framework\TestCase;
 
 /**

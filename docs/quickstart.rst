@@ -66,7 +66,7 @@ The client constructor accepts an associative array of options:
     (callable) Function that transfers HTTP requests over the wire. The
     function is called with a ``Psr7\Http\Message\RequestInterface`` and array
     of transfer options, and must return a
-    ``ImpreseeGuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a
+    ``GuzzleHttp\Promise\PromiseInterface`` that is fulfilled with a
     ``Psr7\Http\Message\ResponseInterface`` on success.
 
 ``...``
@@ -94,7 +94,7 @@ ready:
 
 .. code-block:: php
 
-    use ImpreseeGuzzleHttp\Psr7\Request;
+    use GuzzleHttp\Psr7\Request;
 
     $request = new Request('PUT', 'http://httpbin.org/put');
     $response = $client->send($request, ['timeout' => 2]);
@@ -127,7 +127,7 @@ You can also use the `sendAsync()` and `requestAsync()` methods of a client:
 
 .. code-block:: php
 
-    use ImpreseeGuzzleHttp\Psr7\Request;
+    use GuzzleHttp\Psr7\Request;
 
     // Create a PSR-7 request object to send
     $headers = ['X-Foo' => 'Bar'];
@@ -171,7 +171,7 @@ requests.
 .. code-block:: php
 
     use ImpreseeGuzzleHttp\Client;
-    use ImpreseeGuzzleHttp\Promise;
+    use GuzzleHttp\Promise;
 
     $client = new Client(['base_uri' => 'http://httpbin.org/']);
 
@@ -202,8 +202,8 @@ amount of requests you wish to send.
     use ImpreseeGuzzleHttp\Client;
     use ImpreseeGuzzleHttp\Exception\RequestException;
     use ImpreseeGuzzleHttp\Pool;
-    use ImpreseeGuzzleHttp\Psr7\Request;
-    use ImpreseeGuzzleHttp\Psr7\Response;
+    use GuzzleHttp\Psr7\Request;
+    use GuzzleHttp\Psr7\Response;
 
     $client = new Client();
 
@@ -347,7 +347,7 @@ resource returned from ``fopen``, or an instance of a
     $r = $client->request('POST', 'http://httpbin.org/post', ['body' => $body]);
 
     // Use the stream_for() function to create a PSR-7 stream.
-    $body = \ImpreseeGuzzleHttp\Psr7\stream_for('hello!');
+    $body = \GuzzleHttp\Psr7\stream_for('hello!');
     $r = $client->request('POST', 'http://httpbin.org/post', ['body' => $body]);
 
 An easy way to upload JSON data and set the appropriate header is using the
@@ -547,7 +547,7 @@ Guzzle throws exceptions for errors that occur during a transfer.
 
   .. code-block:: php
 
-      use ImpreseeGuzzleHttp\Psr7;
+      use GuzzleHttp\Psr7;
       use ImpreseeGuzzleHttp\Exception\RequestException;
 
       try {
@@ -571,7 +571,7 @@ Guzzle throws exceptions for errors that occur during a transfer.
 
   .. code-block:: php
 
-      use ImpreseeGuzzleHttp\Psr7;
+      use GuzzleHttp\Psr7;
       use ImpreseeGuzzleHttp\Exception\ClientException;
 
       try {

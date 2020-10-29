@@ -3,9 +3,9 @@ namespace ImpreseeGuzzleHttp\Test\Handler;
 
 use ImpreseeGuzzleHttp\Exception\ConnectException;
 use ImpreseeGuzzleHttp\Handler\CurlHandler;
-use ImpreseeGuzzleHttp\Psr7;
-use ImpreseeGuzzleHttp\Psr7\Request;
-use ImpreseeGuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Response;
 use ImpreseeGuzzleHttp\Tests\Server;
 use ImpreseeGuzzleHttp\Utils;
 use PHPUnit\Framework\TestCase;
@@ -38,8 +38,8 @@ class CurlHandlerTest extends TestCase
         Server::enqueue([$response, $response]);
         $a = new CurlHandler();
         $request = new Request('GET', Server::$url);
-        self::assertInstanceOf('ImpreseeGuzzleHttp\Promise\FulfilledPromise', $a($request, []));
-        self::assertInstanceOf('ImpreseeGuzzleHttp\Promise\FulfilledPromise', $a($request, []));
+        self::assertInstanceOf('GuzzleHttp\Promise\FulfilledPromise', $a($request, []));
+        self::assertInstanceOf('GuzzleHttp\Promise\FulfilledPromise', $a($request, []));
     }
 
     public function testDoesSleep()

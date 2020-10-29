@@ -2,7 +2,7 @@
 namespace ImpreseeGuzzleHttp\Tests\Exception;
 
 use ImpreseeGuzzleHttp\Exception\SeekException;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Psr7;
 use PHPUnit\Framework\TestCase;
 
 class SeekExceptionTest extends TestCase

@@ -4,7 +4,7 @@ namespace ImpreseeGuzzleHttp\Test\Handler;
 use ImpreseeGuzzleHttp\Handler;
 use ImpreseeGuzzleHttp\Handler\CurlFactory;
 use ImpreseeGuzzleHttp\Handler\EasyHandle;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Psr7;
 use ImpreseeGuzzleHttp\Tests\Server;
 use ImpreseeGuzzleHttp\TransferStats;
 use PHPUnit\Framework\TestCase;
@@ -471,7 +471,7 @@ class CurlFactoryTest extends TestCase
 
         $fn = function ($r, $options) use (&$callHandler) {
             $callHandler = true;
-            return \ImpreseeGuzzleHttp\Promise\promise_for(new Psr7\Response());
+            return \GuzzleHttp\Promise\promise_for(new Psr7\Response());
         };
 
         $bd = Psr7\FnStream::decorate(Psr7\stream_for('test'), [

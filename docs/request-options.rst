@@ -211,7 +211,7 @@ This setting can be set to any of the following types:
   .. code-block:: php
 
       // You can send requests that use a Guzzle stream object as the body
-      $stream = ImpreseeGuzzleHttp\Psr7\stream_for('contents...');
+      $stream = GuzzleHttp\Psr7\stream_for('contents...');
       $client->request('POST', '/post', ['body' => $stream]);
 
 .. note::
@@ -513,13 +513,13 @@ created by the client (e.g., ``request()`` and ``requestAsync()``).
     $client->request('GET', '/get', ['headers' => null]);
 
     // Will not overwrite the X-Foo header because it is in the message.
-    use ImpreseeGuzzleHttp\Psr7\Request;
+    use GuzzleHttp\Psr7\Request;
     $request = new Request('GET', 'http://foo.com', ['X-Foo' => 'test']);
     $client->send($request);
 
     // Will overwrite the X-Foo header with the request option provided in the
     // send method.
-    use ImpreseeGuzzleHttp\Psr7\Request;
+    use GuzzleHttp\Psr7\Request;
     $request = new Request('GET', 'http://foo.com', ['X-Foo' => 'test']);
     $client->send($request, ['headers' => ['X-Foo' => 'overwrite']]);
 
@@ -916,7 +916,7 @@ body to an open PSR-7 stream.
 .. code-block:: php
 
     $resource = fopen('/path/to/file', 'w');
-    $stream = ImpreseeGuzzleHttp\Psr7\stream_for($resource);
+    $stream = GuzzleHttp\Psr7\stream_for($resource);
     $client->request('GET', '/stream/20', ['save_to' => $stream]);
 
 .. note::

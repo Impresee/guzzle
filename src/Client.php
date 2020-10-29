@@ -3,8 +3,8 @@ namespace ImpreseeGuzzleHttp;
 
 use ImpreseeGuzzleHttp\Cookie\CookieJar;
 use ImpreseeGuzzleHttp\Exception\GuzzleException;
-use ImpreseeGuzzleHttp\Promise;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Promise;
+use GuzzleHttp\Psr7;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
@@ -46,7 +46,7 @@ class Client implements ClientInterface
      * - handler: (callable) Function that transfers HTTP requests over the
      *   wire. The function is called with a Psr7\Http\Message\RequestInterface
      *   and array of transfer options, and must return a
-     *   ImpreseeGuzzleHttp\Promise\PromiseInterface that is fulfilled with a
+     *   GuzzleHttp\Promise\PromiseInterface that is fulfilled with a
      *   Psr7\Http\Message\ResponseInterface on success.
      *   If no handler is provided, a default handler will be created
      *   that enables all of the request options below by attaching all of the

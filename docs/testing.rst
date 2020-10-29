@@ -26,8 +26,8 @@ a response or exception by shifting return values off of a queue.
     use ImpreseeGuzzleHttp\Client;
     use ImpreseeGuzzleHttp\Handler\MockHandler;
     use ImpreseeGuzzleHttp\HandlerStack;
-    use ImpreseeGuzzleHttp\Psr7\Response;
-    use ImpreseeGuzzleHttp\Psr7\Request;
+    use GuzzleHttp\Psr7\Response;
+    use GuzzleHttp\Psr7\Request;
     use ImpreseeGuzzleHttp\Exception\RequestException;
 
     // Create a mock and queue two responses.
@@ -160,7 +160,7 @@ can queue an HTTP response or an array of responses by calling
 .. code-block:: php
 
     use ImpreseeGuzzleHttp\Client;
-    use ImpreseeGuzzleHttp\Psr7\Response;
+    use GuzzleHttp\Psr7\Response;
     use ImpreseeGuzzleHttp\Tests\Server;
 
     // Start the server and queue a response

@@ -2,7 +2,7 @@
 namespace ImpreseeGuzzleHttp\Tests;
 
 use ImpreseeGuzzleHttp\Client;
-use ImpreseeGuzzleHttp\Psr7;
+use GuzzleHttp\Psr7;
 use Psr\Http\Message\ResponseInterface;
 
 /**
