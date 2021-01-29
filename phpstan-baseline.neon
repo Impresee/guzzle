@@ -1311,32 +1311,32 @@ parameters:
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\headers_from_lines\\(\\) has parameter \\$lines with no value type specified in iterable type iterable\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_headers_from_lines\\(\\) has parameter \\$lines with no value type specified in iterable type iterable\\.$#"
 			count: 1
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\headers_from_lines\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_headers_from_lines\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\debug_resource\\(\\) should return resource but returns resource\\|false\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_debug_resource\\(\\) should return resource but returns resource\\|false\\.$#"
 			count: 1
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\normalize_header_keys\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_normalize_header_keys\\(\\) has parameter \\$headers with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\normalize_header_keys\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_normalize_header_keys\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\is_host_in_noproxy\\(\\) has parameter \\$noProxyArray with no value type specified in iterable type array\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_is_host_in_noproxy\\(\\) has parameter \\$noProxyArray with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/functions.php
 
@@ -1346,7 +1346,7 @@ parameters:
 			path: src/functions.php
 
 		-
-			message: "#^Function ImpreseeGuzzleHttp\\\\json_encode\\(\\) should return string but returns string\\|false\\.$#"
+			message: "#^Function ImpreseeGuzzleHttp\\\\wsee_json_encode\\(\\) should return string but returns string\\|false\\.$#"
 			count: 1
 			path: src/functions.php
 

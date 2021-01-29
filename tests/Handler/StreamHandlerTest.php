@@ -323,7 +323,7 @@ class StreamHandlerTest extends TestCase
 
     public function testVerifyCanBeSetToPath()
     {
-        $path = $path = \ImpreseeGuzzleHttp\default_ca_bundle();
+        $path = $path = \ImpreseeGuzzleHttp\wsee_default_ca_bundle();
         $res = $this->getSendResult(['verify' => $path]);
         $opts = stream_context_get_options($res->getBody()->detach());
         self::assertTrue($opts['ssl']['verify_peer']);
@@ -334,7 +334,7 @@ class StreamHandlerTest extends TestCase
 
     public function testUsesSystemDefaultBundle()
     {
-        $path = $path = \ImpreseeGuzzleHttp\default_ca_bundle();
+        $path = $path = \ImpreseeGuzzleHttp\wsee_default_ca_bundle();
         $res = $this->getSendResult(['verify' => true]);
         $opts = stream_context_get_options($res->getBody()->detach());
         if (PHP_VERSION_ID < 50600) {

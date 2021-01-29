@@ -181,7 +181,7 @@ from the following classes:
 Removed "functions.php", so that Guzzle is truly PSR-4 compliant. The following
 functions can be used as replacements.
 
-- `ImpreseeGuzzleHttp\json_decode` -> `ImpreseeGuzzleHttp\Utils::jsonDecode`
+- `ImpreseeGuzzleHttp\wsee_json_decode` -> `ImpreseeGuzzleHttp\Utils::jsonDecode`
 - `ImpreseeGuzzleHttp\get_path` -> `ImpreseeGuzzleHttp\Utils::getPath`
 - `ImpreseeGuzzleHttp\Utils::setPath` -> `ImpreseeGuzzleHttp\set_path`
 - `ImpreseeGuzzleHttp\Pool::batch` -> `ImpreseeGuzzleHttp\batch`. This function is, however,

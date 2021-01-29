@@ -220,7 +220,7 @@ stack.
     use ImpreseeGuzzleHttp\Client;
 
     $stack = new HandlerStack();
-    $stack->setHandler(\ImpreseeGuzzleHttp\choose_handler());
+    $stack->setHandler(\ImpreseeGuzzleHttp\wsee_choose_handler());
 
     $stack->push(Middleware::mapRequest(function (RequestInterface $r) {
         echo 'A';

@@ -118,7 +118,7 @@
 
 ## 6.2.0 - 2016-03-21
 
-* Feature: added `ImpreseeGuzzleHttp\json_encode` and `ImpreseeGuzzleHttp\json_decode`.
+* Feature: added `ImpreseeGuzzleHttp\wsee_json_encode` and `ImpreseeGuzzleHttp\wsee_json_decode`.
   https://github.com/guzzle/guzzle/pull/1389
 * Bug fix: Fix sleep calculation when waiting for delayed requests.
   https://github.com/guzzle/guzzle/pull/1324
@@ -405,8 +405,8 @@ interfaces.
   PSR-7 message proposal.
 * Removed "functions.php", so that Guzzle is truly PSR-4 compliant. Except
   for the HTTP request functions from function.php, these functions are now
-  implemented in `ImpreseeGuzzleHttp\Utils` using camelCase. `ImpreseeGuzzleHttp\json_decode`
-  moved to `ImpreseeGuzzleHttp\Utils::jsonDecode`. `ImpreseeGuzzleHttp\get_path` moved to
+  implemented in `ImpreseeGuzzleHttp\Utils` using camelCase. `ImpreseeGuzzleHttp\wsee_json_decode`
+  moved to `ImpreseeGuzzleHttp\Utils::wsee_jsonDecode`. `ImpreseeGuzzleHttp\get_path` moved to
   `ImpreseeGuzzleHttp\Utils::getPath`. `ImpreseeGuzzleHttp\set_path` moved to
   `ImpreseeGuzzleHttp\Utils::setPath`. `ImpreseeGuzzleHttp\batch` should now be
   `ImpreseeGuzzleHttp\Pool::batch`, which returns an `objectStorage`. Using functions.php
@@ -559,7 +559,7 @@ interfaces.
 ## 4.1.0 - 2014-05-27
 
 * Added a `json` request option to easily serialize JSON payloads.
-* Added a `ImpreseeGuzzleHttp\json_decode()` wrapper to safely parse JSON.
+* Added a `ImpreseeGuzzleHttp\wsee_json_decode()` wrapper to safely parse JSON.
 * Added `setPort()` and `getPort()` to `ImpreseeGuzzleHttp\Message\RequestInterface`.
 * Added the ability to provide an emitter to a client in the client constructor.
 * Added the ability to persist a cookie session using $_SESSION.

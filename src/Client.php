@@ -265,7 +265,7 @@ class Client implements ClientInterface
 
         // Add the default user-agent header.
         if (!isset($this->config['headers'])) {
-            $this->config['headers'] = ['User-Agent' => default_user_agent()];
+            $this->config['headers'] = ['User-Agent' => wsee_default_user_agent()];
         } else {
             // Add the User-Agent header if one was not already set.
             foreach (array_keys($this->config['headers']) as $name) {
@@ -273,7 +273,7 @@ class Client implements ClientInterface
                     return;
                 }
             }
-            $this->config['headers']['User-Agent'] = default_user_agent();
+            $this->config['headers']['User-Agent'] = wsee_default_user_agent();
         }
     }
 
@@ -394,7 +394,7 @@ class Client implements ClientInterface
         }
 
         if (isset($options['json'])) {
-            $options['body'] = \ImpreseeGuzzleHttp\json_encode($options['json']);
+            $options['body'] = \ImpreseeGuzzleHttp\wsee_json_encode($options['json']);
             unset($options['json']);
             // Ensure that we don't have the header in different case and set the new value.
             $options['_conditional'] = Psr7\_caseless_remove(['Content-Type'], $options['_conditional']);
