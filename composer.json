@@ -48,7 +48,7 @@
             "ImpreseeGuzzleHttp\\": "src/"
         },
         "files": [
-            "src/functions_include.php"
+            "src/wsee_functions_include.php"
         ]
     },
     "autoload-dev": {
